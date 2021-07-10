@@ -45,6 +45,18 @@ public class TransactionRecord {
 	@CreatedDate
 	private Date datetime;
 
+	
+	public TransactionRecord() {
+		
+	}
+	
+	public TransactionRecord(String from, String to, String type, double amount) {
+		this.from = from;
+		this.to = to;
+		this.type = type;
+		this.amount = amount;
+	}
+	
 	public int getId() {
 		return id;
 	}

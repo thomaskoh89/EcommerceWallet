@@ -39,10 +39,9 @@ public class UserAccount {
 	public UserAccount() {
 	}
 
-	public UserAccount(String email, Date dteCreated, Date dteModified, String walletId) {
+	public UserAccount(String email) {
 		this.email = email;
-		this.dteCreated = dteCreated;
-		this.dteModified = dteModified;
+
 	}
 
 	public String getEmail() {

@@ -46,11 +46,8 @@ public class Wallet {
 
 	public Wallet() {}
 	
-	public Wallet(int id, double balanceAmt, Date dteCreated, Date dteModified) {
-		this.id = id;
+	public Wallet(double balanceAmt) {
 		this.balanceAmt = balanceAmt;
-		dteCreated = this.dteCreated;
-		dteModified = this.dteModified;
 	}
 
 	public int getId() {
