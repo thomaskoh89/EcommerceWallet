@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  wallet-sql-docker-container:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=root123
+      - MYSQL_DATABASE=ecommerce
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=user123
+    volumes:
+      - /data/mysql 
+  wallet-app:
+    image: wallet-docker-image
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - wallet-sql-docker-container
+    ports:
+      - 8087:8080
+    volumes:
+      - /data/wallet-app
+    restart: always
+   
